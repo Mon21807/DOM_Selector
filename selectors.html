@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <title>DOM Selectors</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+h2 {
+    color: #555;
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    color: #0074D9;
+    text-decoration: none;
+}
+
+button {
+    background-color: #0074D9;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#myElement {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        padding: 10px;
+    }
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+    <hr />
+    <button onClick="changeH1()">Change H1</button>
+    <button onClick="changeH3()">Change H3</button>
+    <button onClick="changeH5()">Change H5</button>
+    <button onClick="changeGreen()">Change Green</button>
+    <button onClick="changeRed()">Change Red</button>
+    <button onClick="changeBlue()">Change Blue</button>
+    <script>
+      function changeH1() {
+        var firstH1 = document.querySelector('h1');
+    firstH1.style.color = 'red';
+      }
+      
+
+      function changeH3() {
+        var h3Elements = document.querySelectorAll('h3');
+    for (var i = 0; i < h3Elements.length; i++) {
+      h3Elements[i].style.color = 'green';
+    }      }
+
+      function changeH5() {
+        var h5Elements = document.querySelectorAll('h5');
+    for (var i = 0; i < h5Elements.length; i++) {
+      h5Elements[i].style.color = 'blue';
+    }     
+ }
+
+      function changeGreen() {
+        var greenElements = document.querySelectorAll('.green');
+    for (var i = 0; i < greenElements.length; i++) {
+      greenElements[i].style.color = 'green';
+    }
+      }
+
+      function changeRed() {
+        var redElements = document.querySelectorAll('.red');
+    for (var i = 0; i < redElements.length; i++) {
+      redElements[i].style.color = 'red';
+    }      
+}
+
+      function changeBlue() {
+        var blueElements = document.querySelectorAll('.blue');
+    for (var i = 0; i < blueElements.length; i++) {
+      blueElements[i].style.color = 'blue';
+    }
+      }
+    </script>
+  </body>
+</html>
